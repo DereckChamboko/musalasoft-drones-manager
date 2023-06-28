@@ -19,8 +19,8 @@ public class Dispatch {
     @Column(name = "id",nullable = false)
     long id;
 
-    long droneId;
-    long medicationId;
+    long drone;
+    long medication;
     long quantity;
 
 

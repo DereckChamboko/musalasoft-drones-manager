@@ -19,7 +19,7 @@ public class Medication {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id",nullable = false)
     long id;
-    String modelName;
+    String Name;
     int weight;
     String code;
     String image;
