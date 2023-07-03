@@ -1,5 +1,6 @@
 package zw.co.dereckchamboko.musalasoft.dronemanager.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -18,6 +19,7 @@ import java.util.List;
 public class DroneModel {
 
     @Id
+    @JsonIgnore
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "droneModelId",nullable = false)
     long droneModelId;
@@ -28,6 +30,8 @@ public class DroneModel {
     @Column(name = "payload",nullable = false)
     long payload;
 
+
+    @JsonIgnore
     @Column(name = "isActive",nullable = false)
     boolean isActive;
 

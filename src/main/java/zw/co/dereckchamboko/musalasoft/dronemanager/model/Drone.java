@@ -8,6 +8,10 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.awt.*;
+import java.util.Collection;
+
+
 @Data
 @Builder
 @AllArgsConstructor
@@ -36,10 +40,17 @@ public class Drone {
 
     boolean isActive;
 
+
+
     @Column(name = "droneStateId")
     private Long droneStateId;
 
+
+
     @Column(name = "droneModelId")
     private Long droneModelId;
+@OneToMany
+@JoinColumn(name = "drone", insertable = false, updatable = false)
+    private Collection<Dispatch> dispatch;
 
 }

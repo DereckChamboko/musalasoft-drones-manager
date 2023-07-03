@@ -1,6 +1,7 @@
 package zw.co.dereckchamboko.musalasoft.dronemanager.model;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -17,10 +18,12 @@ public class Medication {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "id",nullable = false)
-    long id;
+    @Column(name = "medicationId",nullable = false)
+    long medicationId;
     String Name;
-    int weight;
+    @JsonProperty("unit_weight")
+    @Column(name="weight")
+    int unitWeight;
     String code;
     String image;
 

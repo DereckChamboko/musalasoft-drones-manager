@@ -1,4 +1,4 @@
-INSERT INTO DRONE_STATE (IS_ACTIVE,DRONE_STATE) VALUES (true,'IDLE'),(true,'LOADING'),(true,'LOADED'),(true,'DELIVERING'),(true,'DELIVERED'),(true,'RETURNING');
+INSERT INTO DRONE_STATE (IS_ACTIVE,DRONE_STATE_DESCRIPTION) VALUES (true,'IDLE'),(true,'LOADING'),(true,'LOADED'),(true,'DELIVERING'),(true,'DELIVERED'),(true,'RETURNING');
 INSERT INTO DRONE_MODEL (IS_ACTIVE,PAYLOAD,MODEL_NAME) VALUES (true,100,'Lightweight' ),(true,200,'Middleweight' ),(true,350,'Cruiserweight' ),(true,500,'Heavyweight' );
 
 
