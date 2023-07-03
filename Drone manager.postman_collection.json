@@ -1,0 +1,248 @@
+{
+	"info": {
+		"_postman_id": "5fab7442-d572-43be-9c04-cbc8f532aa94",
+		"name": "Drone manager",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11357889"
+	},
+	"item": [
+		{
+			"name": "Medication",
+			"item": [
+				{
+					"name": "find medication by  ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/medication/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medication",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get list of all medicines",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/medication/all",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medication",
+								"all"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new medicine",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"panado!\",\r\n    \"weight\":2000,\r\n    \"code\":\"code_01 \",\r\n    \"image\":\"https://pichere.com\"\r\n}\r\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/medication/addNew",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"medication",
+								"addNew"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Drone",
+			"item": [
+				{
+					"name": "Find all available drones",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/drone/available",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"drone",
+								"available"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check loaded items by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/drone/checkLoaded/id/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"drone",
+								"checkLoaded",
+								"id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Check loaded items by serial number",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/drone/checkLoaded/serialNumber/msd_001",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"drone",
+								"checkLoaded",
+								"serialNumber",
+								"msd_001"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Load drone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"medicationId\":3,\r\n    \"quantity\":1,\r\n    \"drone\":1\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/drone/load",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"drone",
+								"load"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Add new Drone",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\r\n    \"serialNumber\":\"dronesn003\",\r\n    \"droneModelId\":4,\r\n    \"batteryCapacity\":12,\r\n    \"droneStateId\":1,\r\n    \"active\":true\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/drone/addNew",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"drone",
+								"addNew"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check battery percentage by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/drone/checkBattery/id/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"drone",
+								"checkBattery",
+								"id",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "check battery percentage by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/drone/checkBattery/serialNumber/msd_001",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"drone",
+								"checkBattery",
+								"serialNumber",
+								"msd_001"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

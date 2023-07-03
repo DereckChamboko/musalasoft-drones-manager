@@ -26,7 +26,7 @@ public class MedicationService {
         if(medication.getCode().matches("[^a-zA-Z0-9_]")){
             return ResponseEntity.ok(
                     Error.builder()
-                            .message("Code should only contain letters, numbers and underscore")
+                            .message("Code should only contain letters, numbers and _")
                             .statusCode(0)
                             .build()
             );
